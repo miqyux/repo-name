@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="l.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>shytoask</title>
+</head>
+<body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Do you wanna go out with me?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media4.giphy.com/media/r0nu8ftNO5LclBrwxt/giphy.gif?cid=ecf05e470258edoa7yvod11bwaaiq1pj4qgbljstsjm4cklp&ep=v1_gifs_related&rid=giphy.gif&ct=s.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+</body>
+</html>
